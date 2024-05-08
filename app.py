@@ -9,6 +9,7 @@ if __name__ == "__main__":
 '''
 import speech_recognition as sr
 import win32com.client
+import webbrowser
 # Create a speech object
 speaker = win32com.client.Dispatch("SAPI.SpVoice")
 def say(text):
@@ -31,5 +32,9 @@ if __name__ == "__main__":
     say("Hello from Bhidu")
     while True:
         print("Listening ...")
-        text = takeCommand()
-        say(text)
+        query = takeCommand()
+        if "Open Youtube".lower():
+           say("Khol raha hu bhai ruk jaa...")
+           webbrowser.open("http://www.youtube.com")
+
+        #say(query)
