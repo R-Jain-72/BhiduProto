@@ -33,8 +33,26 @@ if __name__ == "__main__":
     while True:
         print("Listening ...")
         query = takeCommand()
-        if "Open Youtube".lower():
-           say("Khol raha hu bhai ruk jaa...")
-           webbrowser.open("http://www.youtube.com")
+        sites = [
+           ["youtube","https://youtube.com"],
+           ["wikipedia","https://wikipedia.org"],
+           ["google","https://google.com"],
+           ["facebook","https://facebook.com"],
+           ["instagram","https://instagram.com"],
+           ["twitter","https://twitter.com"],
+           ["github","https://github.com"],
+           ["gmail","https://gmail.com"],
+           ["linkedin","https://linkedin.com"],
+           ["stackoverflow","https://stackoverflow.com"],
+           ["reddit","https://reddit.com"],
+           ["amazon","https://amazon.com"],
+           ["flipkart","https://flipkart.com"],
+           ["netflix","https://netflix.com"],
+           ["gmail","https://gmail.com"],
+           ]
+        for site in sites:
+            if f"Open {site[0]}".lower():
+                say(f"Khol raha hu {site[0]} bhai ruk jaa...")
+                webbrowser.open(site[1])
 
         #say(query)
