@@ -37,12 +37,8 @@ if __name__ == "__main__":
            ["youtube","https://youtube.com"],
            ["wikipedia","https://wikipedia.org"],
            ["google","https://google.com"],
-       
            ["reddit","https://reddit.com"],
-           ["amazon","https://amazon.com"],
-           ["flipkart","https://flipkart.com"],
-           ["netflix","https://netflix.com"],
-           ["gmail","https://gmail.com"],
+
            ]
         for site in sites:
             if f"Open {site[0]}".lower():
