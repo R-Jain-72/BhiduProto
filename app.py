@@ -21,7 +21,12 @@ def takeCommand():
   with sr.Microphone() as source:
     r.pause_threshold = 1
     audio = r.listen(source)
-
+    try:
+        query = r.recognize_google(audio, language="en-in")
+        print(f"User said: {query}\n")
+        return query
+    except Exception as e:
+       return say("Error phir seh bol lawde")
 
 if __name__ == "__main__":
     say("Hello from Bhidu")
